@@ -2,20 +2,25 @@ import { CMS_NAME } from '../lib/constants'
 
 const Intro = () => {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
+    <section className="flex-col flex">
+      <h1>
+        Hello World!
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
+      <p>
+        My name is Aman Prakash Mohla. I am software engineer based in Sydney, Australia. I am currently working with <a
+          href="https://nextjs.org/"
+          className="underline hover:text-success duration-200 transition-colors"
+        >
+          Atlassian
+        </a>{' '}. Previously co-founded
+
         <a
           href="https://nextjs.org/"
           className="underline hover:text-success duration-200 transition-colors"
         >
-          Next.js
-        </a>{' '}
-        and {CMS_NAME}.
-      </h4>
+          Tablehero
+        </a>.
+      </p>
     </section>
   )
 }

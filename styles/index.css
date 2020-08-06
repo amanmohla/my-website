@@ -1,5 +1,29 @@
 @tailwind base;
 
+@font-face {
+  font-family: 'Sora';
+  font-weight: 500;
+  src: url('./fonts/Sora-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Sora';
+  font-weight: 300;
+  src: url('./fonts/Sora-Light.ttf');
+}
+
+@font-face {
+  font-family: 'LibreBaskerville';
+  font-weight: 400;
+  src: url('./fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'LibreBaskerville';
+  font-weight: 600;
+  src: url('./fonts/LibreBaskerville-Bold.ttf');
+}
+
 /* Write your own custom base styles here */
 
 /* Start purging... */
@@ -7,6 +31,16 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
+body {
+    background-color: #080808;
+    color: #f9f9f9;
+    font-weight: 300;
+}
+
+.home-page-content {
+  @apply font-serif;
+  @apply text-2xl;
+}
 
 /* Start purging... */
 @tailwind utilities;
