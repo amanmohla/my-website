@@ -4,8 +4,10 @@ type Props = {
   children?: ReactNode
 }
 
-const Container: FunctionComponent = ({ children }: Props) => {
-  return <div className="container mx-auto px-5">{children}</div>
-}
+const Container: FunctionComponent = ({ children }: Props) => (
+  <div className="container mx-auto h-screen flex flex-col">
+    {children}
+  </div>
+)
 
 export default Container
