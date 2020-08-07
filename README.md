@@ -1,6 +1,6 @@
 # My personal website
 
-This code powers my personal space on internet. It powers my website [amanmohla.com](https://amanmohla.com). I use [NextJS](https://nextjs.org) & [Netlify](https://www.netlify.com) to build and run my website. With NextJS, I am also using typescript and styled components. 
+This code powers my personal space on internet. It powers my website [amanmohla.com](https://amanmohla.com). I am using [NextJS](https://nextjs.org) & [Vercel](https://https://vercel.com) to build and run my website.
 
 ## How to use it?
 
@@ -8,10 +8,8 @@ This code powers my personal space on internet. It powers my website [amanmohla.
 
 ```bash
 nvm use
-npm install
-npm run dev
+yarn
+yarn run dev
 ```
 
 ### Running tests
-
-### Deploying to Netlify
