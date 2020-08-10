@@ -32,14 +32,24 @@
 
 /* Write you own custom component styles here */
 body {
-    background-color: #080808;
-    color: #f9f9f9;
+    background-color: #EBEBE3;
+    color:#2B2B28;
     font-weight: 300;
 }
 
 .home-page-content {
   @apply font-serif;
   @apply text-2xl;
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
 }
 
 /* Start purging... */

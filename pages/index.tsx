@@ -11,11 +11,9 @@ type Props = {
 
 
 const Index = () => {
-  // const heroPost = allPosts[0]
-  // const morePosts = allPosts.slice(1)
   return (
     <Layout>
-      <Container>
+      <Container isFullScreen={true}>
         <Navbar/>
         <Home/>
       </Container>
@@ -24,18 +22,3 @@ const Index = () => {
 }
 
 export default Index
-
-// export const getStaticProps = async () => {
-//   const allPosts = getAllPosts([
-//     'title',
-//     'date',
-//     'slug',
-//     'author',
-//     'coverImage',
-//     'excerpt',
-//   ])
-
-//   return {
-//     props: { allPosts },
-//   }
-// }
