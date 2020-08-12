@@ -26,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Sora',
+          'Campton',
           ...defaultTheme.fontFamily.sans,
         ],
         serif: [

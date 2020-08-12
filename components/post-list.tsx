@@ -8,7 +8,7 @@ import Post from '../types/post'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Link from 'next/link'
-import DateFormater from './date-formater'
+import DateFormatter from './date-formater'
 
 type Props = {
     allPosts: Post[]
@@ -21,11 +21,11 @@ type PostItemProps = {
 
 const PostItem = ({ post }: PostItemProps) => (
     <div className="pb-24">
-        <DateFormater dateString={post.date} />
-        <h1 className="text-3xl leading-snug font-bold">{post.title}</h1>
+        <DateFormatter dateString={post.date} />
+        <h1 className="text-4xl font-bold">{post.title}</h1>
         <div className="text-xl py-2 leading-normal">{post.excerpt}</div>
         <Link as={`/blog/${post.slug}`} href="/blog/[post.slug]">
-            <a className="hover:underline text-base font-bold text-red-400 uppercase">Read</a>
+            <a className="hover:underline text-base font-bold text-red-600 uppercase">Read</a>
         </Link>
     </div>
 )

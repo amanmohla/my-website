@@ -1,15 +1,45 @@
 @tailwind base;
 
 @font-face {
-  font-family: 'Sora';
-  font-weight: 500;
-  src: url('./fonts/Sora-SemiBold.ttf');
+  font-family: 'Campton';
+  font-weight: 100;
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Thin.otf');
 }
 
 @font-face {
-  font-family: 'Sora';
+  font-family: 'Campton';
+  font-weight: 200;
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ ExtraLight.otf');
+}
+
+@font-face {
+  font-family: 'Campton';
   font-weight: 300;
-  src: url('./fonts/Sora-Light.ttf');
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Light.otf');
+}
+
+@font-face {
+  font-family: 'Campton';
+  font-weight: 400;
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Book.otf');
+}
+
+@font-face {
+  font-family: 'Campton';
+  font-weight: 500;
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Medium.otf');
+}
+
+@font-face {
+  font-family: 'Campton';
+  font-weight: 600;
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Campton';
+  font-weight: 700;
+  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Bold.otf');
 }
 
 @font-face {
@@ -32,8 +62,8 @@
 
 /* Write you own custom component styles here */
 body {
-    background-color: #EBEBE3;
-    color:#2B2B28;
+    background-color: #2B2B28;
+    color:#EBEBE3;
     font-weight: 300;
 }
 
