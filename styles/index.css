@@ -61,25 +61,28 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
+* {
+  @apply box-border;
+}
+
 body {
-    background-color: #2B2B28;
-    color:#EBEBE3;
-    font-weight: 300;
+  @apply box-border h-screen max-w-full bg-black text-white font-sans font-normal antialiased;
 }
 
-.home-page-content {
-  @apply font-serif;
-  @apply text-2xl;
-}
-
-h1 {
-  @apply text-2xl;
-}
 h2 {
-  @apply text-xl;
+  @apply text-4xl tracking-tight font-semibold leading-snug mt-16 mb-4
 }
-h3 {
-  @apply text-lg;
+
+.post-list-item {
+  @apply mt-8 mb-16
+}
+
+.post-title {
+  @apply text-2xl tracking-tight font-semibold leading-snug my-2
+}
+
+.post-excerpt {
+  @apply text-xl leading-snug mt-2 mb-12
 }
 
 /* Start purging... */
