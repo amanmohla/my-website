@@ -3,7 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 
 type Items = {
-    [key: string]: string | boolean;
+    [key: string]: string;
 };
 
 const postsDirectory = join(process.cwd(), '_posts');
