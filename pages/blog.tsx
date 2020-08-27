@@ -3,20 +3,40 @@ import Container from '../components/container'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import Home from '../components/home'
+import { getAllPosts } from '../lib/api'
+import Post from '../types/post'
+import MoreStories from '../components/more-stories'
+import HeroPost from '../components/hero-post'
+import PostList from '../components/post-list'
 
 type Props = {
-    children?: ReactNode
+    allPosts: Post[]
 }
 
-const Blog: FunctionComponent = ({ children }: Props) => (
-    <Layout>
+const Blog = ({ allPosts }: Props) => {
+    const heroPost = allPosts[0]
+    const morePosts = allPosts.slice(1)
+    return <Layout>
         <Container>
             <Navbar />
-            <section className=" h-screen flex flex-col items-center justify-center">
-                <h1>Page under construction</h1>
-            </section>
+            <PostList allPosts={allPosts}></PostList>
         </Container>
     </Layout>
-)
+}
 
 export default Blog
+
+export const getStaticProps = async () => {
+    const allPosts = getAllPosts([
+        'title',
+        'date',
+        'slug',
+        'author',
+        'coverImage',
+        'excerpt',
+    ])
+
+    return {
+        props: { allPosts },
+    }
+}

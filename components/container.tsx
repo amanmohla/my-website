@@ -1,13 +1,15 @@
-import { ReactNode, FunctionComponent } from 'react'
+import { ReactNode } from 'react'
 
 type Props = {
   children?: ReactNode
+  isFullScreen?: boolean
 }
 
-const Container: FunctionComponent = ({ children }: Props) => (
-  <div className="container mx-auto h-screen flex flex-col">
+const Container = ({ children, isFullScreen = false }: Props) => {
+  const className = `max-w-3xl mx-auto flex flex-col ${isFullScreen ? 'h-screen' : ''}`
+  return <div className={className}>
     {children}
   </div>
-)
+}
 
 export default Container
