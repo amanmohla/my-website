@@ -3,6 +3,7 @@ title: 'My journey as co-founder: Tablehero'
 excerpt: 'I had written this post when we shipped the first version of Tablehero 4 years back. A lot has changed since then. Nevertheless, I would still like to share this roller coaster journey with everyone in the world.'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
+draft: false
 author:
     name: Aman Mohla
     picture: '/assets/blog/authors/aman.jpg'
@@ -72,7 +73,7 @@ Months passed and we were burning through our initial funding quickly. Both capi
 
 Tablehero was still live and serving customers. Meanwhile, [Deap Ubhi](https://medium.com/u/8f3be6a393bf) was trying if we could get acquired by another company. A few companies did show interest in our product but it never piqued to the level of acquisition.
 
-### What I learned
+## What I learned
 
 Starting a company is a journey. There are ample opportunities to learn different things while building a company. Tablehero was no different. When I look back at it, there are many things I would have done differently.
 

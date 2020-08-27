@@ -2,6 +2,7 @@
 title: 'Test post for Markdown formatting'
 excerpt: 'This is just a post to test my markdown formatting.'
 date: '2020-08-16T05:35:07.322Z'
+draft: true
 author:
     name: Aman Mohla
     picture: '/assets/blog/authors/aman.jpg'
@@ -9,21 +10,77 @@ ogImage:
     url: '/assets/blog/hello-world/cover.jpg'
 ---
 
-# h1 Heading 1
+There would be some content here.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## h2 Heading 2
+# h1 Heading 1 This style should be used only for post title
 
-### h3 Heading 3
+## h2 Heading 2 This style should be used for headings in post
 
-#### h4 Heading 4
+### h3 Heading 3 This style should be used for subheading in post
+
+#### h4 Heading 4 This style can be used to go one level deep from subheading
 
 ##### h5 Heading 5
 
 ###### h6 Heading 6
 
+This is some content that would be added in a paragraph before the horizontal break.
+Use this text to see how much spacing is added.
+
 ---
 
-***
+## Emphasis
+
+This is some content which will have **this as bold text** but within this text I can also have __more bold text__ using __ which should work normally.
+
+In another paragraph I am going add *some italic text* and more italic text should is added  _like this_. Can I also make __*bold and italic like this*__. May be not. Lets also test ~~strike~~ text. This is a paragraph with all types of text. This is how a link in the [text](http://www.google.com) should look. This should always open in a new tab.
+
+So now I have **BOLD TEXT** and *Italic text* and ~~strike~~ text and also [link](http://amanmohla.com) text in a paragraph.
+
+---
+
+## Lists
+
+### Unordered List
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+### Ordered List
+
+1. Lorem ipsum dolor sit amet
+   1. Nested ordered list
+   2. Another element in nested ordered list
+2. Consectetur adipiscing elit
+   1. Nested list element
+      1. Deep nested element
+         1. Super deep nested element
+3. Integer molestie lorem at massa
+   * Unordered list element in nested list
+   * Another unordered list element in nested list.
+4. You can use sequential numbers...
+5. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+58. bar
+    + another unordered element
+    + baz
+
+## Blockquotes
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+---
 
 ## Typographic replacements
 
@@ -36,50 +93,6 @@ test.. test... test..... test?..... test!....
 !!!!!! ???? ,,  -- ---
 
 "Smartypants, double quotes" and 'single quotes'
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
 
 ## Code
 

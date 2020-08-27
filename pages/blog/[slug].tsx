@@ -24,33 +24,37 @@ const Post = ({ post, morePosts, preview }: Props) => {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout>
-      <Container>
-        <Navbar />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <div className="max-w-2xl mx-auto px-6">
+      <main className="mt-12 mb-8">
+        <article className="mb-32">
+          <Head>
+            <title>
+              {post.title}
+            </title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
+          <h1>
+            {post.title}
+          </h1>
+          <PostBody content={post.content} />
+        </article>
+      </main>
+    </div>
   )
+  // return (
+  //   <Layout>
+  //     <Container>
+  //       <Navbar />
+  //       {router.isFallback ? (
+  //         <PostTitle>Loading…</PostTitle>
+  //       ) : (
+  //         <>
+
+  //         </>
+  //       )}
+  //     </Container>
+  //   </Layout>
+  // )
 }
 
 export default Post

@@ -1,57 +1,160 @@
 @tailwind base;
 
+/* Thin */
 @font-face {
-  font-family: 'Campton';
-  font-weight: 100;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Thin.otf');
+    font-family: 'Campton';
+    src: url('./fonts/Campton-Thin/font.woff2') format('woff2'),
+        url('./fonts/Campton-Thin/font.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-ThinItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-ThinItalic/font.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Extralight */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-ExtraLight/font.woff2') format('woff2'),
+        url('./fonts/Campton-ExtraLight/font.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-ExtraLightItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-ExtraLightItalic/font.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-Light/font.woff2') format('woff2'),
+        url('./fonts/Campton-Light/font.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-LightItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-LightItalic/font.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Book */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-Book/font.woff2') format('woff2'),
+        url('./fonts/Campton-Book/font.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-BookItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-BookItalic/font.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-Medium/font.woff2') format('woff2'),
+        url('./fonts/Campton-Medium/font.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-MediumItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-MediumItalic/font.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-SemiBold/font.woff2') format('woff2'),
+        url('./fonts/Campton-SemiBold/font.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Campton';
-  font-weight: 200;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ ExtraLight.otf');
+    font-family: 'Campton';
+    src: url('./fonts/Campton-SemiBoldItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-SemiBoldItalic/font.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-Bold/font.woff2') format('woff2'),
+        url('./fonts/Campton-Bold/font.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-BoldItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-BoldItalic/font.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* ExtraBold */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-ExtraBold/font.woff2') format('woff2'),
+        url('./fonts/Campton-ExtraBold/font.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-ExtraBoldItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-ExtraBoldItalic/font.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Black */
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-Black/font.woff2') format('woff2'),
+        url('./fonts/Campton-Black/font.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Campton';
+    src: url('./fonts/Campton-BlackItalic/font.woff2') format('woff2'),
+        url('./fonts/Campton-BlackItalic/font.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Campton';
-  font-weight: 300;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Light.otf');
+    font-family: 'LibreBaskerville';
+    font-weight: 400;
+    src: url('./fonts/LibreBaskerville-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Campton';
-  font-weight: 400;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Book.otf');
-}
-
-@font-face {
-  font-family: 'Campton';
-  font-weight: 500;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Medium.otf');
-}
-
-@font-face {
-  font-family: 'Campton';
-  font-weight: 600;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ SemiBold.otf');
-}
-
-@font-face {
-  font-family: 'Campton';
-  font-weight: 700;
-  src: url('./fonts/Rene\ Bieder\ -\ Campton\ Bold.otf');
-}
-
-@font-face {
-  font-family: 'LibreBaskerville';
-  font-weight: 400;
-  src: url('./fonts/LibreBaskerville-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'LibreBaskerville';
-  font-weight: 600;
-  src: url('./fonts/LibreBaskerville-Bold.ttf');
+    font-family: 'LibreBaskerville';
+    font-weight: 600;
+    src: url('./fonts/LibreBaskerville-Bold.ttf');
 }
 
 /* Write your own custom base styles here */
@@ -61,28 +164,114 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
-* {
-  @apply box-border;
+body {
+    @apply h-screen max-w-full bg-black text-white font-sans font-normal antialiased;
 }
 
-body {
-  @apply box-border h-screen max-w-full bg-black text-white font-sans font-normal antialiased;
+h1 {
+    @apply text-4xl tracking-tight font-extrabold leading-none mt-16 mb-8;
 }
 
 h2 {
-  @apply text-4xl tracking-tight font-semibold leading-snug mt-16 mb-4
+    @apply text-3xl tracking-tight font-bold leading-none mt-16 mb-8;
 }
 
+h3 {
+    @apply text-2xl tracking-tight font-bold leading-tight mt-12 mb-8;
+}
+
+h4 {
+    @apply text-2xl font-semibold leading-snug mt-12 mb-4 text-gray-300;
+}
+
+h5 {
+    @apply text-xl font-semibold leading-snug mt-8 mb-4;
+}
+
+h6 {
+    @apply text-base font-semibold leading-snug mt-8 mb-4 text-gray-300;
+}
+
+p, ul, ol {
+    @apply text-xl leading-relaxed tracking-normal text-gray-100;
+}
+
+p {
+  @apply my-8;
+}
+
+ul, ol {
+  @apply mt-4 mb-2 ml-8
+}
+
+
+li > p,
+li > ul,
+li > ol {
+    @apply my-2;
+}
+ol {
+    @apply list-decimal;
+}
+ul {
+    @apply list-disc;
+}
+
+hr {
+    @apply border-t border-gray-400 my-12;
+}
+
+strong,
+b {
+    @apply text-white font-extrabold;
+}
+
+i,
+em {
+    @apply text-white font-light italic;
+}
+
+a {
+    @apply text-blue-400;
+}
+
+
+/* Blockquotes */
+blockquote {
+    @apply p-2 mx-6 mb-4 border-l-4 border-gray-400 italic;
+}
+blockquote > p {
+    @apply mb-0;
+}
+/* Tables */
+td,
+th {
+    @apply px-2 py-1 border border-gray-400;
+}
+tr:nth-child(odd) {
+    @apply bg-gray-100;
+}
+table {
+    @apply mb-6;
+}
+
+/* Wrap any inline highlights `that are really long`, but don't modify
+   the setting for codeblocks (inside ```), which are rendered in as:
+   <pre><code>...
+*/
+:not(pre) > code.language-text {
+    white-space: pre-line;
+}
 .post-list-item {
-  @apply mt-8 mb-16
+    @apply mt-8 mb-12;
 }
 
 .post-title {
-  @apply text-2xl tracking-tight font-semibold leading-snug my-2
+    @apply text-2xl tracking-tight font-bold leading-snug my-2 text-gray-200;
 }
 
 .post-excerpt {
-  @apply text-xl leading-snug mt-2 mb-12
+    @apply text-lg leading-relaxed text-gray-300;
 }
 
 /* Start purging... */
