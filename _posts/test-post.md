@@ -34,7 +34,7 @@ Use this text to see how much spacing is added.
 
 This is some content which will have **this as bold text** but within this text I can also have __more bold text__ using __ which should work normally.
 
-In another paragraph I am going add *some italic text* and more italic text should is added  _like this_. Can I also make __*bold and italic like this*__. May be not. Lets also test ~~strike~~ text. This is a paragraph with all types of text. This is how a link in the [text](http://www.google.com) should look. This should always open in a new tab.
+In another paragraph I am going add *some italic text* and more italic text should is added  _like this_. Can I also make __*bold and italic like this*__. May be not. Lets also test ~~strike~~ text. This is a paragraph with all types of text. This is how a link in the <a href="http://www.google.com" target="_blank">New Tab link</a> and [same tab link](http://www.google.com) should look. This should always open in a new tab.
 
 So now I have **BOLD TEXT** and *Italic text* and ~~strike~~ text and also [link](http://amanmohla.com) text in a paragraph.
 
@@ -74,11 +74,50 @@ Start numbering with offset:
     + another unordered element
     + baz
 
+---
+
 ## Blockquotes
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
+
+---
+
+## Code
+
+This is inline `code` and it should show `like this`.
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+Block code "fences"
+
+```
+This is a block code without any language specified
+```
+
+Syntax highlighting
+
+``` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+```json
+"site": {
+  "foo":"bar",
+  "age": 34
+  "boo": "baz",
+}
+```
 
 ---
 
@@ -93,33 +132,6 @@ test.. test... test..... test?..... test!....
 !!!!!! ???? ,,  -- ---
 
 "Smartypants, double quotes" and 'single quotes'
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
 
 ## Tables
 

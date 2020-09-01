@@ -33,7 +33,7 @@ const Index = ({ allPosts }: IndexPageProps) => {
       {allPosts.map((post, i) => {
         const postLink = `/blog/${post.slug}`;
         return (<article key={i} className="post-list-item">
-          <a href={postLink}>
+          <a href={postLink} className="no-underline">
             <header className="post-title">{post.title}</header>
             <div className="post-excerpt">{post.excerpt}</div>
           </a>
