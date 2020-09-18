@@ -1,42 +1,40 @@
+/** @jsx jsx */
+import { Link as TLink, Flex, Box, jsx } from 'theme-ui'
 import Link from 'next/link';
 import Avatar from './avatar';
+import { AVATAR_URL } from '../lib/constants';
+
+type NavLinkProps = {
+  href: string;
+  text: string;
+};
+
+const NavLink = ({ href, text }: NavLinkProps) => (
+  <TLink px={2} href={href}>{text}</TLink>
+);
 
 const Navbar = () => {
-    return (
-        <nav className="text-xl font-medium flex items-center justify-between py-8 text-blue-400">
-            <Link as={`/`} href="/">
-                <a className="px-8">
-                    <Avatar picture="/assets/images/aman_illustration.jpg" />
-                </a>
-            </Link>
-            <div className="flex">
-                <Link as={`/`} href="/">
-                    <a className="hover:underline px-8 hover:text-blue-600">
-                        Home
-                    </a>
-                </Link>
-                <Link as={`/blog`} href="/blog">
-                    <a className="hover:underline px-8 hover:text-blue-600">
-                        Blog
-                    </a>
-                </Link>
-            </div>
-            {/* <Link as={`/`} href="/">
-        <a className="hover:underline px-8">Home</a>
-      </Link>
-      <Link as={`/about`} href="/about">
-        <a className="hover:underline px-8">About</a>
-      </Link>
-      <Link as={`/`} href="/">
-        <a className="px-8">
-          <Avatar picture="/assets/images/aman_illustration.jpg" />
-        </a>
-      </Link>
-      <Link as={`/books`} href="/books">
-        <a className="hover:underline px-8">Books</a>
-      </Link> */}
-        </nav>
-    );
+  return (
+    <nav>
+      <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box p={2}>
+          <Link as={`/`} href="/">
+            <a className="px-8">
+              <Avatar picture={AVATAR_URL} />
+            </a>
+          </Link>
+        </Box>
+        <Box p={2}>
+          <div>
+            <NavLink href='/about' text="About" />
+            <NavLink href='/posts' text="Posts" />
+            <NavLink href='/books' text="Books" />
+          </div>
+        </Box>
+      </Flex>
+    </nav >
+
+  );
 };
 
 export default Navbar;

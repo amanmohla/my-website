@@ -1,14 +1,9 @@
 ---
 title: 'My journey as co-founder: Tablehero'
-excerpt: 'I had written this post when we shipped the first version of Tablehero 4 years back. A lot has changed since then. Nevertheless, I would still like to share this roller coaster journey with everyone in the world.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+excerpt: 'I co-founded Tablehero back in 2014. This post highlights my journey as co-founder of Tablehero.'
+date: '16-07-2020'
 draft: false
-author:
-    name: Aman Mohla
-    picture: '/assets/blog/authors/aman.jpg'
-ogImage:
-    url: '/assets/blog/hello-world/cover.jpg'
+author: Aman Prakash Mohla
 ---
 
 ## Hello World

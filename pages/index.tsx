@@ -1,79 +1,33 @@
-// import { getAllPosts } from '../lib/api'
-// import Link from 'next/link'
-// import DateFormatter from '../components/date-formater'
-// import Post from '../types/post'
+/** @jsx jsx */
+import { Heading, Text, jsx } from 'theme-ui'
+import Layout from '../components/layout'
+import PostList from '../components/post-list'
+import { getAllPosts } from '../lib/api'
+import { FunctionComponent, ReactNode } from 'react'
+import { Post } from '../type'
 
-// type IndexPageProps = {
-//   allPosts: Post[]
-// }
+type IndexPageProps = {
+  children?: ReactNode;
+  allPosts: Post[];
+}
 
-
-
-// const Index = ({ allPosts }: IndexPageProps) => {
-//   return (
-//     <div className="max-w-2xl mx-auto px-6">
-//       <main className="mt-12 mb-24">
-//         <div className="flex flex-col items-center lg:flex-row">
-//           <img
-//             src="/assets/images/compressed-profile.jpg"
-//             className="w-32 h-32 lg:w-40 lg:h-40 rounded-full mb-12 lg:mb-0 border-2"
-//             alt="profile image Aman Prakash Mohla"
-//           />
-//           <header className="text-xl lg:pl-16">
-//             <div className="mb-2 font-bold">Hey there! 👋🏼</div>
-//             <div>
-//               I am Aman Prakash Mohla, a full stack developer based in Sydney, Australia.
-//               I love building web applications using Javascript and GoLang.
-//               I currently work with Atlassian and have previously co-founded Tablehero.
-//             </div>
-//           </header>
-//         </div>
-//       </main>
-//       <h2>Thoughts</h2>
-//       {allPosts.map((post, i) => {
-//         const postLink = `/blog/${post.slug}`;
-//         return (<article key={i} className="post-list-item">
-//           <a href={postLink} className="no-underline">
-//             <header className="post-title">{post.title}</header>
-//             <div className="post-excerpt">{post.excerpt}</div>
-//           </a>
-//         </article>
-//         )
-//       })}
-//     </div>
-//   )
-// }
-
-// export default Index
-
-// export const getStaticProps = async () => {
-//   const allPosts = getAllPosts([
-//     'title',
-//     'date',
-//     'slug',
-//     'author',
-//     'coverImage',
-//     'excerpt',
-//     'draft',
-//   ])
-
-//   return {
-//     props: { allPosts },
-//   }
-// }
-
-import React from 'react'
-import { ThemeProvider } from 'theme-ui'
-import theme from '../theme'
-
-const index = () => {
+const IndexPage: FunctionComponent = (props: IndexPageProps) => {
   return (
-    <ThemeProvider theme={theme}>
-      <div>
-        Hello World!
-    </div>
-    </ThemeProvider>
+    <Layout>
+      <Heading as='h1' py={3}>Hi! I'm Aman Prakash Mohla</Heading>
+      <Text pb={4} sx={{ fontSize: 3 }}>
+        Welcome to my space on internet where I post about all the ideas running in my head.
+        I am a full stack developer based in Sydney, Australia.
+        I love building web applications using Javascript and GoLang.
+        I currently work with Atlassian and have previously co-founded Tablehero.
+      </Text>
+      <PostList allPosts={props.allPosts} />
+    </Layout>
   )
 }
 
-export default index
+export default IndexPage
+
+export const getStaticProps = () => ({
+  props: { allPosts: getAllPosts() },
+});
