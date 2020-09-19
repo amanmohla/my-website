@@ -14,8 +14,8 @@ type IndexPageProps = {
 const IndexPage: FunctionComponent = (props: IndexPageProps) => {
   return (
     <Layout>
-      <Heading as='h1' py={3}>Hi! I'm Aman Prakash Mohla</Heading>
-      <Text pb={4} sx={{ fontSize: 3 }}>
+      <Heading as='h1' variant='title'>Hi! I'm Aman Prakash Mohla</Heading>
+      <Text sx={{ fontSize: 2 }} pb={6}>
         Welcome to my space on internet where I post about all the ideas running in my head.
         I am a full stack developer based in Sydney, Australia.
         I love building web applications using Javascript and GoLang.
@@ -28,6 +28,6 @@ const IndexPage: FunctionComponent = (props: IndexPageProps) => {
 
 export default IndexPage
 
-export const getStaticProps = () => ({
+export const getStaticProps = async () => ({
   props: { allPosts: getAllPosts() },
 });

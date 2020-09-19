@@ -18,7 +18,7 @@ const PostItem = ({ post }: { post: Post }) => (
 )
 
 const PostList = ({ allPosts }: { allPosts: Post[] }) => (<div>
-    <Heading as='h2' py={3}>Recent posts</Heading>
+    <Heading as='h2' variant="subHeading">Recent posts</Heading>
     <ul
         sx={{
             listStyle: 'none',

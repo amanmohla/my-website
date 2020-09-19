@@ -1,4 +1,12 @@
 export default {
+    layout: {
+        container: {
+            maxWidth: '768px',
+            minHeight: '100vh',
+            margin: '0 auto',
+            padding: 4,
+        },
+    },
     breakpoints: ['40em', '52em', '64em'],
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
     fonts: {
@@ -7,14 +15,18 @@ export default {
         heading: 'inherit',
         monospace: 'Menlo, monospace',
     },
-    fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+    fontSizes: [16, 18, 21, 24, 32, 48, 64, 72, 96],
     fontWeights: {
         body: 400,
-        heading: 700,
+        heading: 600,
+        light: 300,
+        medium: 500,
+        semibold: 600,
         bold: 700,
+        black: 900,
     },
     lineHeights: {
-        body: 1.5,
+        body: 1.6,
         heading: 1.125,
     },
     colors: {
@@ -31,11 +43,40 @@ export default {
             borderRadius: 99999,
         },
     },
+    links: {
+        bold: {
+            fontWeight: 'bold',
+        },
+        nav: {
+            fontSize: 1,
+            fontWeight: 'medium',
+            color: 'inherit',
+            textDecoration: 'none',
+        },
+    },
     text: {
+        default: {
+            fontSize: 3,
+        },
         heading: {
             fontFamily: 'heading',
             lineHeight: 'heading',
             fontWeight: 'heading',
+            letterSpacing: '-0.025em',
+        },
+        title: {
+            fontFamily: 'heading',
+            lineHeight: 'heading',
+            fontWeight: 'heading',
+            letterSpacing: '-0.025em',
+            fontSize: 4,
+            py: 4,
+        },
+        subHeading: {
+            fontSize: 4,
+        },
+        postTitle: {
+            fontSize: 4,
         },
     },
     styles: {
@@ -43,6 +84,7 @@ export default {
             fontFamily: 'body',
             lineHeight: 'body',
             fontWeight: 'body',
+            fontSize: 2,
         },
         h1: {
             variant: 'text.heading',

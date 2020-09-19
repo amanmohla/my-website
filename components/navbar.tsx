@@ -10,30 +10,33 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ href, text }: NavLinkProps) => (
-  <TLink px={2} href={href}>{text}</TLink>
+  <TLink pl={4} href={href} variant="nav">{text}</TLink>
 );
 
 const Navbar = () => {
   return (
-    <nav>
-      <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-        <Box p={2}>
-          <Link as={`/`} href="/">
-            <a className="px-8">
-              <Avatar picture={AVATAR_URL} />
-            </a>
-          </Link>
+    <header>
+      <nav>
+        <Box py={4}>
+          <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+            <Box>
+              <Link as={`/`} href="/">
+                <a>
+                  <Avatar picture={AVATAR_URL} />
+                </a>
+              </Link>
+            </Box>
+            <Box>
+              <div>
+                <NavLink href='/about' text="About" />
+                <NavLink href='/posts' text="Posts" />
+                <NavLink href='/books' text="Books" />
+              </div>
+            </Box>
+          </Flex>
         </Box>
-        <Box p={2}>
-          <div>
-            <NavLink href='/about' text="About" />
-            <NavLink href='/posts' text="Posts" />
-            <NavLink href='/books' text="Books" />
-          </div>
-        </Box>
-      </Flex>
-    </nav >
-
+      </nav >
+    </header>
   );
 };
 
