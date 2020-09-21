@@ -1,5 +1,5 @@
 ---
-title: 'Test post for Markdown formatting'
+title: 'Test post'
 excerpt: 'This is just a post to test my markdown formatting.'
 date: '2020-08-16T05:35:07.322Z'
 draft: true
@@ -10,16 +10,23 @@ ogImage:
     url: '/assets/blog/hello-world/cover.jpg'
 ---
 
-There would be some content here.
+This is a test post which I use to verify my markdown styles.
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-# h1 Heading 1 This style should be used only for post title
+# Heading 1 This should be used for top level headings
 
-## h2 Heading 2 This style should be used for headings in post
+Adding some content after H1 to see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-### h3 Heading 3 This style should be used for subheading in post
+## Heading 2 Should be used as sub-headings
 
-#### h4 Heading 4 This style can be used to go one level deep from subheading
+Adding some content after H2 to see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+### Heading 3 Muted sub heading
+
+Adding some content after H3 to see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+#### h4 Heading 4
 
 ##### h5 Heading 5
 
@@ -30,7 +37,7 @@ Use this text to see how much spacing is added.
 
 ---
 
-## Emphasis
+## Heading 2
 
 This is some content which will have **this as bold text** but within this text I can also have __more bold text__ using __ which should work normally.
 
@@ -78,9 +85,7 @@ Start numbering with offset:
 
 ## Blockquotes
 
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
+> Adding a blockquote
 
 ---
 

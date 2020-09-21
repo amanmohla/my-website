@@ -1,4 +1,5 @@
-import markdownStyles from './markdown-styles.module.css'
+/** @jsx jsx */
+import { Box, jsx } from 'theme-ui'
 import ReactMarkdown from 'react-markdown';
 
 type Props = {
@@ -7,9 +8,9 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="my-4">
+    <Box sx={{ variant: 'styles' }}>
       <ReactMarkdown source={content} />
-    </div>
+    </Box >
   )
 }
 

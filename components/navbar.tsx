@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Link as TLink, Flex, Box, jsx } from 'theme-ui'
+import { Button, Link as TLink, Flex, Box, jsx } from 'theme-ui'
 import Link from 'next/link';
 import Avatar from './avatar';
 import { AVATAR_URL } from '../lib/constants';
@@ -10,28 +10,22 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ href, text }: NavLinkProps) => (
-  <TLink pl={4} href={href} variant="nav">{text}</TLink>
+  <Button><TLink href={href} variant="nav">{text}</TLink></Button>
 );
 
 const Navbar = () => {
   return (
     <header>
       <nav>
-        <Box py={4}>
-          <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box py={3}>
+          <Flex sx={{ justifyContent: 'space-between', alignItems: 'center', alignContent: 'center' }}>
+            <TLink href="/" sx={{ border: 0, }}>
+              <Avatar picture={AVATAR_URL} />
+            </TLink>
             <Box>
-              <Link as={`/`} href="/">
-                <a>
-                  <Avatar picture={AVATAR_URL} />
-                </a>
-              </Link>
-            </Box>
-            <Box>
-              <div>
-                <NavLink href='/about' text="About" />
-                <NavLink href='/posts' text="Posts" />
-                <NavLink href='/books' text="Books" />
-              </div>
+              <NavLink href='/blog' text="Blog" />
+              {/* <NavLink href='/about' text="About" />
+                <NavLink href='/books' text="Books" /> */}
             </Box>
           </Flex>
         </Box>

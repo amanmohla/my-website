@@ -5,10 +5,7 @@
     "scripts": {
         "dev": "NODE_ENV=development next -p 8082",
         "build": "NODE_ENV=production next build",
-        "build-dev": "NODE_ENV=development next build",
-        "start": "NODE_ENV=production next start",
-        "clean": "rm -rf .next ; npm ci ; NODE_ENV=development npm run dev",
-        "now-build": "next build && next export -o dist",
+        "clean": "rm -rf .next",
         "test": "jest"
     },
     "keywords": [

@@ -11,12 +11,12 @@ type IndexPageProps = {
   allPosts: Post[];
 }
 
-const IndexPage: FunctionComponent = (props: IndexPageProps) => {
+const IndexPage = (props: IndexPageProps) => {
   return (
     <Layout>
       <Heading as='h1' variant='title'>Hi! I'm Aman Prakash Mohla</Heading>
-      <Text sx={{ fontSize: 2 }} pb={6}>
-        Welcome to my space on internet where I post about all the ideas running in my head.
+      <Text sx={{ fontSize: 1, color: 'text' }} pb={5}>
+        Welcome to my space on internet.
         I am a full stack developer based in Sydney, Australia.
         I love building web applications using Javascript and GoLang.
         I currently work with Atlassian and have previously co-founded Tablehero.

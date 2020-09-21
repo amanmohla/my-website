@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { Heading, jsx } from 'theme-ui'
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import PostBody from '../../components/post-body';
@@ -19,12 +21,12 @@ const PostPage = (props: PostPageProps) => {
   }
   return (
     <Layout>
-      <main className="block mt-12 mb-8">
-        <article className="block mb-32">
+      <main sx={{ pb: 5 }}>
+        <article>
           <Head>
             <title>{props.post.title}</title>
           </Head>
-          <h1>{props.post.title}</h1>
+          <Heading as='h1' variant="postTitle">{props.post.title}</Heading>
           <PostBody content={props.post.content} />
         </article>
       </main>

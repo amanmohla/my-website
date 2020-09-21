@@ -5,11 +5,11 @@ import { getAllPosts } from '../lib/api'
 import { Post } from '../type'
 import PostList from '../components/post-list'
 
-type PostsPageProps = {
+type BlogPageProps = {
     posts: Post[];
 }
 
-const Posts = ({ posts }: PostsPageProps) => (
+const BlogPage = ({ posts }: BlogPageProps) => (
     <Layout>
         <section>
             <PostList allPosts={posts} />
@@ -17,7 +17,7 @@ const Posts = ({ posts }: PostsPageProps) => (
     </Layout>
 )
 
-export default Posts
+export default BlogPage
 
 
 export const getStaticProps = () => ({
