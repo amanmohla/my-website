@@ -1,42 +1,25 @@
-import { ReactNode, FunctionComponent } from 'react'
-import Container from '../components/container'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import Layout from '../components/layout'
-import Navbar from '../components/navbar'
-import Home from '../components/home'
 import { getAllPosts } from '../lib/api'
-import Post from '../types/post'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
+import { Post } from '../type'
 import PostList from '../components/post-list'
 
-type Props = {
-    allPosts: Post[]
+type BlogPageProps = {
+    posts: Post[];
 }
 
-const Blog = ({ allPosts }: Props) => {
-    const heroPost = allPosts[0]
-    const morePosts = allPosts.slice(1)
-    return <Layout>
-        <Container>
-            <Navbar />
-            <PostList allPosts={allPosts}></PostList>
-        </Container>
+const BlogPage = ({ posts }: BlogPageProps) => (
+    <Layout>
+        <section>
+            <PostList allPosts={posts} />
+        </section>
     </Layout>
-}
+)
 
-export default Blog
+export default BlogPage
 
-export const getStaticProps = async () => {
-    const allPosts = getAllPosts([
-        'title',
-        'date',
-        'slug',
-        'author',
-        'coverImage',
-        'excerpt',
-    ])
 
-    return {
-        props: { allPosts },
-    }
-}
+export const getStaticProps = () => ({
+    props: { posts: getAllPosts() },
+});

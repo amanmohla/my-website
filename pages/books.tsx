@@ -1,8 +1,7 @@
+/** @jsx jsx */
+import { Heading, jsx } from 'theme-ui'
 import { ReactNode, FunctionComponent } from 'react'
-import Container from '../components/container'
 import Layout from '../components/layout'
-import Navbar from '../components/navbar'
-import Home from '../components/home'
 
 type Props = {
   children?: ReactNode
@@ -10,12 +9,9 @@ type Props = {
 
 const Books: FunctionComponent = ({ children }: Props) => (
   <Layout>
-    <Container>
-      <Navbar />
-      <section className=" h-screen flex flex-col items-center justify-center">
-        <h1>Page under construction</h1>
-      </section>
-    </Container>
+    <section>
+      <Heading>Page under construction</Heading>
+    </section>
   </Layout>
 )
 

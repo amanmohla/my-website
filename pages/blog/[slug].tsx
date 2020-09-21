@@ -1,63 +1,40 @@
+/** @jsx jsx */
+import { Heading, jsx } from 'theme-ui'
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '../../components/container';
 import PostBody from '../../components/post-body';
-import Navbar from '../../components/navbar';
-import PostHeader from '../../components/post-header';
-import Layout from '../../components/layout';
-import { getPostBySlug, getAllPosts } from '../../lib/api';
-import PostTitle from '../../components/post-title';
+import { getPostBySlug, getAllPostsSlug } from '../../lib/api';
 import Head from 'next/head';
-import { CMS_NAME } from '../../lib/constants';
-import markdownToHtml from '../../lib/markdownToHtml';
-import PostType from '../../types/post';
-import Link from 'next/link';
+import React, { ReactNode } from 'react';
+import { Post } from '../../type';
+import Layout from '../../components/layout';
 
-type Props = {
-  post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
+type PostPageProps = {
+  children?: ReactNode;
+  post: Post;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const PostPage = (props: PostPageProps) => {
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
+  if (!router.isFallback && !props.post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div className="max-w-2xl mx-auto px-6">
-      <Link as={`/`} href="/">
-        <a className="block font-extrabold mt-8">&lt; Home</a>
-      </Link>
-      <main className="block mt-12 mb-8">
-        <article className="block mb-32">
+    <Layout>
+      <main sx={{ pb: 5 }}>
+        <article>
           <Head>
-            <title>{post.title}</title>
-            <meta property="og:image" content={post.ogImage.url} />
+            <title>{props.post.title}</title>
           </Head>
-          <h1>{post.title}</h1>
-          <PostBody content={post.content} />
+          <Heading as='h1' variant="postTitle">{props.post.title}</Heading>
+          <PostBody content={props.post.content} />
         </article>
       </main>
-    </div>
+    </Layout>
   );
-  // return (
-  //   <Layout>
-  //     <Container>
-  //       <Navbar />
-  //       {router.isFallback ? (
-  //         <PostTitle>Loading…</PostTitle>
-  //       ) : (
-  //         <>
-
-  //         </>
-  //       )}
-  //     </Container>
-  //   </Layout>
-  // )
 };
 
-export default Post;
+export default PostPage;
 
 type Params = {
   params: {
@@ -65,39 +42,15 @@ type Params = {
   };
 };
 
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-  ]);
-  const content = await markdownToHtml(post.content || '');
+export const getStaticProps = async ({ params }: Params) => ({
+  props: {
+    post: getPostBySlug(params.slug)
+  },
+});
 
-  return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
-  };
-}
-
-export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
-
-  return {
-    paths: posts.map((posts) => {
-      return {
-        params: {
-          slug: posts.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
-}
+export const getStaticPaths = async () => ({
+  paths: getAllPostsSlug().map(slug => ({
+    params: { slug }
+  })),
+  fallback: false
+});
