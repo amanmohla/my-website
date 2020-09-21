@@ -136,7 +136,7 @@ export default {
         h1: {
             variant: 'text.heading',
             lineHeight: 'heading',
-            fontWeight: 'medium',
+            fontWeight: 'heading',
             fontSize: 4,
             m: 0,
             p: 0,
@@ -145,21 +145,21 @@ export default {
         h2: {
             variant: 'text.heading',
             lineHeight: 'heading',
-            fontWeight: 'medium',
+            fontWeight: 'heading',
             fontSize: 3,
             m: 0,
             p: 0,
-            pt: 4,
+            pt: 5,
         },
         h3: {
             variant: 'text.heading',
             lineHeight: 'heading',
-            fontWeight: 'heading',
+            fontWeight: 'medium',
             fontSize: 3,
-            color: 'rgba(41,41,41, 0.65)',
+            color: 'rgba(41,41,41, 0.95)',
             m: 0,
             p: 0,
-            mt: 4,
+            pt: 5,
         },
         h4: {
             variant: 'text.heading',
@@ -167,7 +167,7 @@ export default {
             fontWeight: 'extraBold',
             m: 0,
             p: 0,
-            mt: 4,
+            pt: 4,
         },
         h5: {
             variant: 'text.heading',
@@ -175,7 +175,7 @@ export default {
             fontWeight: 'bold',
             m: 0,
             p: 0,
-            mt: 4,
+            pt: 4,
         },
         h6: {
             variant: 'text.heading',
