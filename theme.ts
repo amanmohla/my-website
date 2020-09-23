@@ -1,5 +1,4 @@
-import { merge } from 'theme-ui';
-import { darken, lighten } from '@theme-ui/color';
+const { darken, lighten } = require('@theme-ui/color');
 
 const resetSpace = {
     p: 0,

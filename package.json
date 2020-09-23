@@ -6,6 +6,7 @@
         "dev": "NODE_ENV=development next -p 8082",
         "build": "NODE_ENV=production next build",
         "clean": "rm -rf .next",
+        "typecheck": "tsc --noEmit",
         "test": "jest"
     },
     "keywords": [
@@ -22,8 +23,6 @@
     ],
     "dependencies": {
         "@theme-ui/color": "^0.3.1",
-        "@theme-ui/presets": "^0.3.0",
-        "@theme-ui/prism": "^0.3.0",
         "date-fns": "^2.16.1",
         "gray-matter": "^4.0.2",
         "next": "^9.5.3",
