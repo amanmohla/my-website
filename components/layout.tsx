@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
       <Meta />
       <Container>
         <Navbar />
-        <main sx={{ p: 2 }}>{children}</main>
+        <main>{children}</main>
       </Container>
     </>
   );
