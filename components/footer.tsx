@@ -1,15 +1,13 @@
-import SocialIcon from './social-icon'
+import SocialIcon from './social-icon';
 
-const Footer = () => {
-  return (
+const Footer: React.FC = () => (
     <footer>
-      <div>
-        <SocialIcon iconName={'github'}></SocialIcon>
-        <SocialIcon iconName={'twitter'}></SocialIcon>
-        <SocialIcon iconName={'email'}></SocialIcon>
-      </div>
+        <div>
+            <SocialIcon iconName="github" />
+            <SocialIcon iconName="twitter" />
+            <SocialIcon iconName="email" />
+        </div>
     </footer>
-  )
-}
+);
 
-export default Footer
+export default Footer;

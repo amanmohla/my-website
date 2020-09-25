@@ -1,13 +1,11 @@
 ---
-title: 'Test post'
-excerpt: 'This is just a post to test my markdown formatting.'
-date: '2020-08-16T05:35:07.322Z'
+title: "Test post"
+excerpt: "This is just a post to test my markdown formatting."
+date: "2020-08-16T05:35:07.322Z"
 draft: true
 author:
     name: Aman Mohla
-    picture: '/assets/blog/authors/aman.jpg'
-ogImage:
-    url: '/assets/blog/hello-world/cover.jpg'
+    picture: "/assets/blog/authors/aman.jpg"
 ---
 
 This is a test post which I use to verify my markdown styles.
@@ -39,11 +37,11 @@ Use this text to see how much spacing is added.
 
 ## Heading 2
 
-This is some content which will have **this as bold text** but within this text I can also have __more bold text__ using __ which should work normally.
+This is some content which will have **this as bold text** but within this text I can also have **more bold text** using \_\_ which should work normally.
 
-In another paragraph I am going add *some italic text* and more italic text should is added  _like this_. Can I also make __*bold and italic like this*__. May be not. Lets also test ~~strike~~ text. This is a paragraph with all types of text. This is how a link in the <a href="http://www.google.com" target="_blank">New Tab link</a> and [same tab link](http://www.google.com) should look. This should always open in a new tab.
+In another paragraph I am going add _some italic text_ and more italic text should is added _like this_. Can I also make **_bold and italic like this_**. May be not. Lets also test ~~strike~~ text. This is a paragraph with all types of text. This is how a link in the <a href="http://www.google.com" target="_blank">New Tab link</a> and [same tab link](http://www.google.com) should look. This should always open in a new tab.
 
-So now I have **BOLD TEXT** and *Italic text* and ~~strike~~ text and also [link](http://amanmohla.com) text in a paragraph.
+So now I have **BOLD TEXT** and _Italic text_ and ~~strike~~ text and also [link](http://amanmohla.com) text in a paragraph.
 
 ---
 
@@ -51,26 +49,26 @@ So now I have **BOLD TEXT** and *Italic text* and ~~strike~~ text and also [link
 
 ### Unordered List
 
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
+    - Ac tristique libero volutpat at
+    * Facilisis in pretium nisl aliquet
     - Nulla volutpat aliquam velit
-+ Very easy!
+- Very easy!
 
 ### Ordered List
 
 1. Lorem ipsum dolor sit amet
-   1. Nested ordered list
-   2. Another element in nested ordered list
+    1. Nested ordered list
+    2. Another element in nested ordered list
 2. Consectetur adipiscing elit
-   1. Nested list element
-      1. Deep nested element
-         1. Super deep nested element
+    1. Nested list element
+        1. Deep nested element
+            1. Super deep nested element
 3. Integer molestie lorem at massa
-   * Unordered list element in nested list
-   * Another unordered list element in nested list.
+    - Unordered list element in nested list
+    - Another unordered list element in nested list.
 4. You can use sequential numbers...
 5. ...or keep all the numbers as `1.`
 
@@ -78,8 +76,8 @@ Start numbering with offset:
 
 57. foo
 58. bar
-    + another unordered element
-    + baz
+    - another unordered element
+    - baz
 
 ---
 
@@ -108,9 +106,9 @@ This is a block code without any language specified
 
 Syntax highlighting
 
-``` js
+```js
 var foo = function (bar) {
-  return bar++;
+    return bar++;
 };
 
 console.log(foo(5));
@@ -134,25 +132,25 @@ Enable typographer option to see result.
 
 test.. test... test..... test?..... test!....
 
-!!!!!! ???? ,,  -- ---
+!!!!!! ???? ,, -- ---
 
 "Smartypants, double quotes" and 'single quotes'
 
 ## Tables
 
-| Option | Description |
-| ------ | ----------- |
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
 Right aligned columns
 
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| Option |                                                               Description |
+| -----: | ------------------------------------------------------------------------: |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine |    engine to be used for processing templates. Handlebars is the default. |
+|    ext |                                      extension to be used for dest files. |
 
 ## Links
 
@@ -173,7 +171,7 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 ## Plugins
 
@@ -221,12 +219,12 @@ Duplicated footnote reference[^second].
 
 Term 1
 
-:   Definition 1
+: Definition 1
 with lazy continuation.
 
-Term 2 with *inline markup*
+Term 2 with _inline markup_
 
-:   Definition 2
+: Definition 2
 
         { some code, part of Definition 2 }
 
@@ -235,11 +233,11 @@ Term 2 with *inline markup*
 _Compact style:_
 
 Term 1
-  ~ Definition 1
+~ Definition 1
 
 Term 2
-  ~ Definition 2a
-  ~ Definition 2b
+~ Definition 2a
+~ Definition 2b
 
 ### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
 
@@ -247,10 +245,10 @@ This is HTML abbreviation example.
 
 It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
-*[HTML]: Hyper Text Markup Language
+\*[HTML]: Hyper Text Markup Language
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
 ::: warning
-*here be dragons*
+_here be dragons_
 :::

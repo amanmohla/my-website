@@ -1,56 +1,61 @@
 /** @jsx jsx */
-import { Heading, jsx } from 'theme-ui'
+import { Heading, jsx } from 'theme-ui';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
+import Head from 'next/head';
 import PostBody from '../../components/post-body';
 import { getPostBySlug, getAllPostsSlug } from '../../lib/api';
-import Head from 'next/head';
-import React, { ReactNode } from 'react';
 import { Post } from '../../type';
 import Layout from '../../components/layout';
 
 type PostPageProps = {
-  children?: ReactNode;
-  post: Post;
+    post: Post;
 };
 
-const PostPage = (props: PostPageProps) => {
-  const router = useRouter();
-  if (!router.isFallback && !props.post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-  return (
-    <Layout>
-      <main sx={{ pb: 5 }}>
-        <article>
-          <Head>
-            <title>{props.post.title}</title>
-          </Head>
-          <Heading as='h1' variant="postTitle">{props.post.title}</Heading>
-          <PostBody content={props.post.content} />
-        </article>
-      </main>
-    </Layout>
-  );
+const PostPage: React.FC<PostPageProps> = ({ post }: PostPageProps) => {
+    const router = useRouter();
+    if (!router.isFallback && !post?.slug) {
+        return <ErrorPage statusCode={404} />;
+    }
+    return (
+        <Layout>
+            <main sx={{ pb: 5 }}>
+                <article>
+                    <Head>
+                        <title>{post.title}</title>
+                    </Head>
+                    <Heading as="h1" variant="postTitle">
+                        {post.title}
+                    </Heading>
+                    <PostBody content={post.content} />
+                </article>
+            </main>
+        </Layout>
+    );
 };
 
 export default PostPage;
 
 type Params = {
-  params: {
-    slug: string;
-  };
+    params: {
+        slug: string;
+    };
 };
 
-export const getStaticProps = async ({ params }: Params) => ({
-  props: {
-    post: getPostBySlug(params.slug)
-  },
+export const getStaticProps = async ({
+    params,
+}: Params): Promise<{ props: PostPageProps }> => ({
+    props: {
+        post: getPostBySlug(params.slug),
+    },
 });
 
-export const getStaticPaths = async () => ({
-  paths: getAllPostsSlug().map(slug => ({
-    params: { slug }
-  })),
-  fallback: false
+export const getStaticPaths = async (): Promise<{
+    paths: { params: { slug: string } }[];
+    fallback: boolean;
+}> => ({
+    paths: getAllPostsSlug().map((slug) => ({
+        params: { slug },
+    })),
+    fallback: false,
 });

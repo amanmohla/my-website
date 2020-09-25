@@ -1,15 +1,13 @@
 /** @jsx jsx */
-import { Avatar as TUIAvatar, jsx } from 'theme-ui'
+import { Avatar as TUIAvatar, jsx } from 'theme-ui';
 
-type Props = {
-  name?: string
-  picture: string
-}
+type AvatarProps = {
+    name?: string;
+    picture: string;
+};
 
-const Avatar = ({ name, picture }: Props) => {
-  return (
+const Avatar: React.FC<AvatarProps> = ({ name, picture }: AvatarProps) => (
     <TUIAvatar src={picture} alt={name} />
-  )
-}
+);
 
-export default Avatar
+export default Avatar;

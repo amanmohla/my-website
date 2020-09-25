@@ -1,22 +1,22 @@
 /** @jsx jsx */
+import { Container, jsx } from 'theme-ui';
 import Meta from './meta';
 import Navbar from './navbar';
-import { Container, jsx } from 'theme-ui'
 
-type Props = {
-  children: React.ReactNode;
+type LayoutProps = {
+    children: React.ReactNode;
 };
 
-const Layout = ({ children }: Props) => {
-  return (
-    <>
-      <Meta />
-      <Container>
-        <Navbar />
-        <main>{children}</main>
-      </Container>
-    </>
-  );
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
+    return (
+        <>
+            <Meta />
+            <Container>
+                <Navbar />
+                <main>{children}</main>
+            </Container>
+        </>
+    );
 };
 
 export default Layout;

@@ -1,7 +1,7 @@
 ---
-title: 'My journey as co-founder: Tablehero'
-excerpt: 'I co-founded Tablehero back in 2014. This post highlights the ups and downs of my journey as co-founder of Tablehero.'
-date: '16-07-2020'
+title: "My journey as co-founder: Tablehero"
+excerpt: "I co-founded Tablehero back in 2014. This post highlights the ups and downs of my journey as co-founder of Tablehero."
+date: "16-07-2020"
 draft: false
 author: Aman Prakash Mohla
 ---
@@ -16,9 +16,9 @@ We just shipped the first version of [TableHero](http://tablehero.com/) a few da
 
 It was back in February 2014, when [Deap Ubhi](https://medium.com/u/8f3be6a393bf) connected with me about building a reservation and waitlist management terminal for US-based restaurants. The pitch was simple — develop an intuitive, smarter and affordable OpenTable competitor. Although, I had no clue about OpenTable, but I disposed of the idea because I could relate to the pain points identified by Deap.
 
-- $1295 installation and training fee.
-- $249/month subscription fee.
-- $1 per diner from OpenTable and $.25 per diner from your website.
+-   \$1295 installation and training fee.
+-   \$249/month subscription fee.
+-   $1 per diner from OpenTable and $.25 per diner from your website.
 
 $1600 only to take reservations from your website. And on top of that, you pay $1 for each diner who reserves through OpenTable. I would call that daylight robbery.
 

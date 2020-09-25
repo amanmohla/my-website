@@ -1,17 +1,17 @@
 /** @jsx jsx */
-import { Box, jsx } from 'theme-ui'
+import { Box, jsx } from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
 
-type Props = {
-  content: string
-}
+type PostBodyProps = {
+    content: string;
+};
 
-const PostBody = ({ content }: Props) => {
-  return (
-    <Box sx={{ variant: 'styles' }}>
-      <ReactMarkdown source={content} />
-    </Box >
-  )
-}
+const PostBody: React.FC<PostBodyProps> = ({ content }: PostBodyProps) => {
+    return (
+        <Box sx={{ variant: 'styles' }}>
+            <ReactMarkdown source={content} />
+        </Box>
+    );
+};
 
-export default PostBody
+export default PostBody;

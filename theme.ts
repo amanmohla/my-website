@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { darken, lighten } = require('@theme-ui/color');
 
 const resetSpace = {
@@ -188,7 +189,7 @@ const theme = {
             borderColor: 'muted',
             pl: 3,
             ml: '-16px',
-            // @ts-ignore
+            //@ts-ignore:overriding the space defined in <p> tag
             p: { ...resetSpace },
         },
         pre: {

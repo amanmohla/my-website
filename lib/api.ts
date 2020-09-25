@@ -16,10 +16,10 @@ export const getPostByFileName = (filename: string): Post => {
 };
 
 export const postsDirectory = join(process.cwd(), POSTS_DIRECTORY);
-export const getPostFilePath = (filename: string) =>
+export const getPostFilePath = (filename: string): string =>
     join(postsDirectory, filename);
 
-export const getAllPostsSlug = () =>
+export const getAllPostsSlug = (): string[] =>
     fs
         .readdirSync(postsDirectory)
         .map((filename) => filename.replace('.md', ''));
