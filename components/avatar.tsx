@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { Avatar as TUIAvatar, jsx } from 'theme-ui';
+import { Avatar as TUIAvatar } from 'theme-ui';
 
 type AvatarProps = {
     name?: string;

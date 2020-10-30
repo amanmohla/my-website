@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { Button, Link as TLink, Flex, Box, jsx } from 'theme-ui';
 import Avatar from './avatar';

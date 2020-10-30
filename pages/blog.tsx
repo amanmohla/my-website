@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
 import Layout from '../components/layout';
 import { getAllPosts } from '../lib/api';
 import { Post } from '../type';

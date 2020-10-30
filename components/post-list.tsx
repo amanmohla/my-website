@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { Box, Heading, Text, Link, jsx } from 'theme-ui';
 import { Post } from '../type';

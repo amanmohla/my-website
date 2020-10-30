@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { Heading, jsx } from 'theme-ui';
+import { Heading } from 'theme-ui';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';

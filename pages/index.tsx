@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { Heading, Text, Box, jsx } from 'theme-ui';
 import Layout from '../components/layout';
