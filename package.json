@@ -27,6 +27,9 @@
     ],
     "dependencies": {
         "@theme-ui/color": "^0.3.1",
+        "@types/chart.js": "^2.9.27",
+        "axios": "^0.21.0",
+        "chart.js": "^2.9.4",
         "date-fns": "^2.16.1",
         "gray-matter": "^4.0.2",
         "next": "^10.0.0",
