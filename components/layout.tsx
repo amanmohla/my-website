@@ -1,22 +1,20 @@
 import React from 'react';
-import { Container } from 'theme-ui';
 import Meta from './meta';
-import Navbar from './navbar';
 
-type LayoutProps = {
+type SiteLayoutProps = {
     children: React.ReactNode;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
+//This is the layout which all pages of the site would use
+const SiteLayout: React.FC<SiteLayoutProps> = ({
+    children,
+}: SiteLayoutProps) => {
     return (
         <React.Fragment>
             <Meta />
-            <Container>
-                <Navbar />
-                <main>{children}</main>
-            </Container>
+            <div>{children}</div>
         </React.Fragment>
     );
 };
 
-export default Layout;
+export default SiteLayout;

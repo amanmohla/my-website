@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import SiteLayout from '../components/layout';
 import { GetServerSideProps } from 'next';
 import Chart from 'chart.js';
 import axios from 'axios';
@@ -107,13 +107,13 @@ const ChartsPage: React.FC<any> = ({
         });
     }, []);
     return (
-        <Layout>
+        <SiteLayout>
             <section>
                 <div className="chartjs-wrapper">
                     <canvas id="test" width="1200" />
                 </div>
             </section>
-        </Layout>
+        </SiteLayout>
     );
 };
 

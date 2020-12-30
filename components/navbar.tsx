@@ -1,40 +1,51 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { Button, Link as TLink, Flex, Box, jsx } from 'theme-ui';
-import Avatar from './avatar';
-import { AVATAR_URL } from '../lib/constants';
+import { Flex, Link } from '@chakra-ui/react';
 
-type NavLinkProps = {
-    href: string;
-    text: string;
-};
-
-const NavLink: React.FC<NavLinkProps> = ({ href, text }: NavLinkProps) => (
-    <Button variant="primary">
-        <TLink href={href} variant="nav">
-            {text}
-        </TLink>
-    </Button>
+const Logo: React.FC<any> = ({ color = '#38B2AC' }) => (
+    <svg
+        width="48"
+        height="48"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M25.25 2.45374L42.0346 12.1443C42.8081 12.5909 43.2846 13.4162 43.2846 14.3094V33.6906C43.2846 34.5838 42.8081 35.4091 42.0346 35.8557L25.25 45.5463C24.4765 45.9928 23.5235 45.9928 22.75 45.5463L5.96539 35.8557C5.19189 35.4091 4.71539 34.5838 4.71539 33.6906V14.3094C4.71539 13.4162 5.19189 12.5909 5.96539 12.1443L22.75 2.45374C23.5235 2.00716 24.4765 2.00716 25.25 2.45374Z"
+            stroke={color}
+            strokeWidth="3"
+        />
+        <path
+            d="M32.0835 30.56C32.1635 30.752 32.2035 30.912 32.2035 31.04C32.2035 31.344 32.0755 31.6 31.8195 31.808C31.5795 32.016 31.3075 32.12 31.0035 32.12C30.7955 32.12 30.5955 32.064 30.4035 31.952C30.2275 31.824 30.0915 31.648 29.9955 31.424L28.4115 27.824H19.6275L18.0435 31.424C17.9475 31.648 17.8035 31.824 17.6115 31.952C17.4195 32.064 17.2195 32.12 17.0115 32.12C16.6915 32.12 16.4035 32.016 16.1475 31.808C15.9075 31.6 15.7875 31.344 15.7875 31.04C15.7875 30.912 15.8275 30.752 15.9075 30.56L22.6755 15.752C22.7875 15.496 22.9635 15.296 23.2035 15.152C23.4595 15.008 23.7235 14.936 23.9955 14.936C24.2675 14.936 24.5235 15.008 24.7635 15.152C25.0195 15.296 25.2035 15.496 25.3155 15.752L32.0835 30.56ZM20.5155 25.856H27.5475L24.0195 17.912L20.5155 25.856Z"
+            fill={color}
+        />
+    </svg>
 );
-
 const Navbar: React.FC = () => {
     return (
         <header>
             <nav>
-                <Flex
-                    py={6}
-                    sx={{
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        alignContent: 'center',
-                    }}
-                >
-                    <TLink href="/" sx={{ border: 0 }}>
-                        <Avatar picture={AVATAR_URL} />
-                    </TLink>
-                    <Box>
-                        <NavLink href="/blog" text="Blog" />
-                    </Box>
+                <Flex align="center" justify="space-between">
+                    <Link href="/">
+                        <Logo />
+                    </Link>
+                    {/* <Button
+                        variant="outline"
+                        borderColor="teal.400"
+                        color="teal.400"
+                        as="a"
+                        href="/blog"
+                        _hover={{
+                            bg: 'teal.400',
+                            color: 'gray.50',
+                            transform: 'scale(1.02)',
+                        }}
+                        _active={{
+                            bg: 'teal.400',
+                            color: 'gray.50',
+                            transform: 'scale(1.02)',
+                        }}
+                    >
+                        Blog
+                    </Button> */}
                 </Flex>
             </nav>
         </header>

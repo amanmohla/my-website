@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { Box, jsx } from 'theme-ui';
+import { Box } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 
 type PostBodyProps = {
@@ -9,7 +7,7 @@ type PostBodyProps = {
 
 const PostBody: React.FC<PostBodyProps> = ({ content }: PostBodyProps) => {
     return (
-        <Box sx={{ variant: 'styles' }}>
+        <Box>
             <ReactMarkdown source={content} />
         </Box>
     );

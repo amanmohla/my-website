@@ -1,11 +1,11 @@
-import { Heading } from 'theme-ui';
+import { Heading, Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import PostBody from '../../components/post-body';
 import { getPostBySlug, getAllPostsSlug } from '../../lib/api';
 import { Post } from '../../type';
-import Layout from '../../components/layout';
+import SiteLayout from '../../components/layout';
 
 type PostPageProps = {
     post: Post;
@@ -17,8 +17,8 @@ const PostPage: React.FC<PostPageProps> = ({ post }: PostPageProps) => {
         return <ErrorPage statusCode={404} />;
     }
     return (
-        <Layout>
-            <main sx={{ pb: 5 }}>
+        <SiteLayout>
+            <Box as="main" pb={4}>
                 <article>
                     <Head>
                         <title>{post.title}</title>
@@ -28,8 +28,8 @@ const PostPage: React.FC<PostPageProps> = ({ post }: PostPageProps) => {
                     </Heading>
                     <PostBody content={post.content} />
                 </article>
-            </main>
-        </Layout>
+            </Box>
+        </SiteLayout>
     );
 };
 

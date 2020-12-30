@@ -1,52 +1,45 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { Heading, Text, Box, jsx } from 'theme-ui';
-import Layout from '../components/layout';
-import PostList from '../components/post-list';
-import { getAllPosts } from '../lib/api';
-import { Post } from '../type';
+import { Heading, Text, Flex, Container } from '@chakra-ui/react';
+import SiteLayout from '../components/layout';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
-type IndexPageProps = {
-    allPosts: Post[];
-};
-
-const IndexPage: React.FC<IndexPageProps> = ({ allPosts }: IndexPageProps) => {
+const IndexPage: React.FC<any> = () => {
     return (
-        <Layout>
-            <Heading as="h1" variant="title">
-                Hi! I&#39;m Aman Prakash Mohla
-            </Heading>
-            <Text
-                sx={{
-                    fontSize: 3,
-                    color: 'text',
-                    fontFamily: 'body',
-                    lineHeight: 'body',
-                    fontWeight: 'body',
-                    letterSpacing: 'body',
-                }}
-                m={0}
-                pb={8}
-            >
-                Welcome to my space on internet. I am a full stack developer
-                based in Sydney, Australia. I love building web applications
-                using Javascript and GoLang. I currently work with Atlassian and
-                have previously co-founded Tablehero.
-            </Text>
-            <Box mb={6}>
-                <Heading as="h2" variant="subHeading">
-                    Recent posts
-                </Heading>
-            </Box>
-            <PostList allPosts={allPosts} />
-        </Layout>
+        <SiteLayout>
+            <Flex direction="column" minHeight="100vh" p={12}>
+                <Navbar />
+                <Flex
+                    flex="1"
+                    direction="column"
+                    justify="center"
+                    mx="auto"
+                    my={16}
+                    maxWidth={{ base: '760px', lg: '960px', xl: '1140px' }}
+                >
+                    <Text fontSize="4xl" pl={4}>
+                        👋
+                    </Text>
+                    <Heading as="h1" size="4xl" mt={6} mb={8} pl={4}>
+                        Aman Prakash Mohla
+                    </Heading>
+                    <Container fontSize="2xl" color="gray.400" mx={0}>
+                        Software developer 👨🏽‍💻 living in Sydney, Australia 🇦🇺. I
+                        am currently working with Atlassian as a Senior
+                        developer. I love to build things for the web 😺. When I
+                        am not writing code I am out running on trails 🏃‍♂️ or
+                        riding my bike up the hills 🚵‍♂️.
+                    </Container>
+                </Flex>
+                <Footer />
+            </Flex>
+        </SiteLayout>
     );
 };
 
 export default IndexPage;
 
-export const getStaticProps = async (): Promise<{
-    props: { allPosts: Post[] };
-}> => ({
-    props: { allPosts: getAllPosts() },
-});
+// export const getStaticProps = async (): Promise<{
+//     props: { allPosts: Post[] };
+// }> => ({
+//     props: { allPosts: getAllPosts() },
+// });

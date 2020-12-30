@@ -1,12 +1,15 @@
 import { AppProps } from 'next/app';
 import '../public/index.css';
-import { ThemeProvider } from 'theme-ui';
+import { extendTheme } from '@chakra-ui/react';
 import theme from '../theme';
+import { ChakraProvider } from '@chakra-ui/react';
+
+const extendedTheme = extendTheme(theme);
 
 const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => (
-    <ThemeProvider theme={theme}>
+    <ChakraProvider theme={extendedTheme}>
         <Component {...pageProps} />
-    </ThemeProvider>
+    </ChakraProvider>
 );
 
 export default App;
