@@ -1,4 +1,4 @@
-import { Flex, Link } from '@chakra-ui/react';
+import { Flex, Link, Button } from '@chakra-ui/react';
 
 const Logo: React.FC<any> = ({ color = '#38B2AC' }) => (
     <svg
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
                     <Link href="/">
                         <Logo />
                     </Link>
-                    {/* <Button
+                    <Button
                         variant="outline"
                         borderColor="teal.400"
                         color="teal.400"
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                         }}
                     >
                         Blog
-                    </Button> */}
+                    </Button>
                 </Flex>
             </nav>
         </header>

@@ -22,7 +22,7 @@ const IndexPage: React.FC<any> = () => {
                     <Heading as="h1" size="4xl" mt={6} mb={8} pl={4}>
                         Aman Prakash Mohla
                     </Heading>
-                    <Container fontSize="2xl" color="gray.400" mx={0}>
+                    <Container fontSize="2xl" color="gray.300" mx={0}>
                         Software developer 👨🏽‍💻 living in Sydney, Australia 🇦🇺. I
                         am currently working with Atlassian as a Senior
                         developer. I love to build things for the web 😺. When I

@@ -8,8 +8,8 @@ This code powers my personal space on internet. It powers my website [amanmohla.
 
 ```bash
 nvm use
-yarn
-yarn run dev
+npm
+npm run dev
 ```
 
 ### Running tests
